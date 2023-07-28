@@ -1,10 +1,10 @@
-/* Archivo: Configuracion.c
+/* Archivo: ADC.c
  * Dispositivo: PIC16F887
  * Autor: Kevin Alarcón
  * Compilador: XC8(v2.40), MPLABX V6.05
  * 
  * 
- * Programa: Librería de configuracion
+ * Programa: Librería de configuracion del ADC
  * Hardware: NA
  * 
  * Creado: 17 de julio, 2023
@@ -59,8 +59,8 @@ int adc_get_channel(){
     return canal;
 }
 
-float map (int val, int minx, int maxx, int miny, int maxy){
-    float vo;
-    vo = (float)(val-minx)*(maxy-miny)/(maxx-minx)+ miny; 
+int map (int val, int minx, int maxx, int miny, int maxy){ //Función para mapear el valor del potenciometro a cualquier otro valor.
+    int vo;
+    vo = (long)(val-minx)*(maxy-miny)/(maxx-minx)+ miny; 
     return vo;
 }

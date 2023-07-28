@@ -2830,7 +2830,7 @@ void adc_init(int channel);
 int adc_read();
 void adc_change_channel(int channel);
 int adc_get_channel();
-float map (int val, int minx, int maxx, int miny, int maxy);
+int map (int val, int minx, int maxx, int miny, int maxy);
 # 14 "ADC.c" 2
 
 
@@ -2880,8 +2880,8 @@ int adc_get_channel(){
     return canal;
 }
 
-float map (int val, int minx, int maxx, int miny, int maxy){
-    float vo;
-    vo = (float)(val-minx)*(maxy-miny)/(maxx-minx)+ miny;
+int map (int val, int minx, int maxx, int miny, int maxy){
+    int vo;
+    vo = (long)(val-minx)*(maxy-miny)/(maxx-minx)+ miny;
     return vo;
 }

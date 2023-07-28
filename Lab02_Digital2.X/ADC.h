@@ -17,7 +17,7 @@ void adc_init(int channel);
 int adc_read();
 void adc_change_channel(int channel);
 int adc_get_channel();
-float map (int val, int minx, int maxx, int miny, int maxy);
+int map (int val, int minx, int maxx, int miny, int maxy);
 
 #endif	/* ADC_H */
 

@@ -7,7 +7,7 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "LCD8bits.c" 2
-# 11 "LCD8bits.c"
+# 14 "LCD8bits.c"
 # 1 "./LCD8bits.h" 1
 # 39 "./LCD8bits.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v6.05/packs/Microchip/PIC16Fxxx_DFP/1.3.42/xc8\\pic\\include\\xc.h" 1 3
@@ -2650,7 +2650,7 @@ void Lcd_Write_String8(char *a);
 void Lcd_Shift_Right8(void);
 
 void Lcd_Shift_Left8(void);
-# 11 "LCD8bits.c" 2
+# 14 "LCD8bits.c" 2
 
 
 void Lcd_Port8(char a) {
@@ -2658,11 +2658,11 @@ void Lcd_Port8(char a) {
 }
 
 void Lcd_Cmd8(char a) {
-    PORTCbits.RC5 = 0;
+    PORTCbits.RC0 = 0;
     Lcd_Port8(a);
-    PORTCbits.RC6 = 1;
+    PORTCbits.RC1 = 1;
     _delay((unsigned long)((4)*(8000000/4000.0)));
-    PORTCbits.RC6 = 0;
+    PORTCbits.RC1 = 0;
 }
 
 void Lcd_Clear8(void) {
@@ -2704,11 +2704,11 @@ void Lcd_Write_Char8(char a) {
     char temp, y;
     temp = a;
     y = a;
-    PORTCbits.RC5 = 1;
+    PORTCbits.RC0 = 1;
     Lcd_Port8(y);
-    PORTCbits.RC6 = 1;
+    PORTCbits.RC1 = 1;
     _delay((unsigned long)((40)*(8000000/4000000.0)));
-    PORTCbits.RC6 = 0;
+    PORTCbits.RC1 = 0;
 
 }
 

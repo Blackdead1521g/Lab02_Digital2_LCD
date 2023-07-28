@@ -1,12 +1,15 @@
-/* 
- * File: LCD.c  
- * Se utilizó y se adaptaron las librerías de Ligo George 
- * de la página www.electrosome.com
- * Enlace: https://electrosome.com/lcd-pic-mplab-xc8/
- * Revision history: 
+/* Archivo: LCD8bits.c
+ * Dispositivo: PIC16F887
+ * Autor: Kevin Alarcón
+ * Compilador: XC8(v2.40), MPLABX V6.05
+ * 
+ * 
+ * Programa: Librería de configuracion para la LCD en 8bits
+ * Hardware: NA
+ * 
+ * Creado: 20 de julio, 2023
+ * Última modificación: 28 de julio, 2023
  */
-
-//LCD Functions Developed by electroSome
 
 #include "LCD8bits.h"
 

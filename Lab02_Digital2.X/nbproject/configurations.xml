@@ -7,6 +7,7 @@
       <itemPath>ADC.h</itemPath>
       <itemPath>LCD.h</itemPath>
       <itemPath>LCD8bits.h</itemPath>
+      <itemPath>USART.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -20,6 +21,7 @@
       <itemPath>PreLab02.c</itemPath>
       <itemPath>Lab02.c</itemPath>
       <itemPath>LCD8bits.c</itemPath>
+      <itemPath>USART.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -151,6 +153,14 @@
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
       <item path="PreLab02.c" ex="true" overriding="false">
+        <HI-TECH-COMP>
+        </HI-TECH-COMP>
+        <HI-TECH-LINK>
+        </HI-TECH-LINK>
+        <XC8-CO>
+        </XC8-CO>
+        <XC8-config-global>
+        </XC8-config-global>
       </item>
       <Simulator>
         <property key="codecoverage.enabled" value="Disable"/>
